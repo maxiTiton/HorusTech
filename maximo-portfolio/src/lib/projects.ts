@@ -2,27 +2,24 @@ import type { Project } from "@/components/ProjectCard";
 
 export const projects: Project[] = [
   {
-    title: "Cabañas El Bosque",
+    title: "Las Casonas",
     description:
-      "Landing page para complejo de cabañas. Desarrollo front-end responsivo con foco en performance y SEO.",
+      "Sitio web para complejo de cabañas. Desarrollo front‑end responsivo con foco en performance y SEO.",
     tags: ["Next.js", "React", "Tailwind CSS"],
-    liveUrl: "#", // TODO: reemplazar por URL desplegada
-    repoUrl: "#", // TODO: reemplazar por repositorio
+    liveUrl: "https://www.las-casonas.com.ar/",
   },
   {
-    title: "Cabañas La Montaña",
+    title: "Dos Lunas Online",
     description:
-      "Sitio web estático para alquiler turístico, galerías y secciones informativas, optimizado para móviles.",
+      "Web informativa para cabañas/turismo con diseño limpio, galerías y secciones esenciales.",
     tags: ["Next.js", "TypeScript", "UI/UX"],
-    liveUrl: "#", // TODO
-    repoUrl: "#", // TODO
+    liveUrl: "https://www.doslunasonline.com.ar/",
   },
   {
-    title: "Gastro Local App",
+    title: "Luis María — App gastronómica",
     description:
       "Aplicación full‑stack para un local gastronómico: menú, pedidos y panel de administración.",
     tags: ["Full‑stack", "API", "Auth"],
-    liveUrl: "#", // TODO
-    repoUrl: "#", // TODO
+    liveUrl: "https://luis-maria.vercel.app/",
   },
 ];
