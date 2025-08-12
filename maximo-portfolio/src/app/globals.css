@@ -3,26 +3,37 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #6e59ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b0b10;
+    --foreground: #ededf2;
+    --accent: #8f87ff;
   }
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
+  background: radial-gradient(1200px 600px at 10% -10%, color-mix(in oklch, var(--accent) 30%, transparent) 0%, transparent 60%),
+              radial-gradient(1000px 500px at 100% 10%, color-mix(in oklch, var(--accent) 24%, transparent) 0%, transparent 55%),
+              var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
 }
+
+/* Utility helpers */
+.btn-primary { @apply inline-flex items-center justify-center rounded-md bg-foreground text-background hover:bg-foreground/90 disabled:opacity-60; }
+.btn-outline { @apply inline-flex items-center justify-center rounded-md border border-foreground/20 hover:bg-foreground/5; }
+.text-gradient { background: linear-gradient(90deg, var(--foreground), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.card { @apply rounded-2xl border border-foreground/10 bg-background/60 backdrop-blur-sm; }

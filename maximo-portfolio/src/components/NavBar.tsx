@@ -13,11 +13,33 @@ const sections = [
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string>("inicio");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    sections.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActive(id);
+          });
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0.01 }
+      );
+      io.observe(el);
+      observers.push(io);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   return (
@@ -42,7 +64,10 @@ export default function NavBar() {
         <ul className="hidden sm:flex gap-6 text-sm">
           {sections.map((s) => (
             <li key={s.id}>
-              <a href={`#${s.id}`} className="hover:opacity-80">
+              <a
+                href={`#${s.id}`}
+                className={`hover:opacity-80 ${active === s.id ? "text-accent" : ""}`}
+              >
                 {s.label}
               </a>
             </li>
@@ -57,7 +82,7 @@ export default function NavBar() {
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
-                  className="block py-2"
+                  className={`block py-2 ${active === s.id ? "text-accent" : ""}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {s.label}
