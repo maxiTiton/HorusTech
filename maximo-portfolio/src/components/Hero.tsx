@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 import Reveal from "@/components/Reveal";
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const sections = [
   { id: "inicio", label: "Inicio" },
@@ -51,28 +52,32 @@ export default function NavBar() {
           Máximo Titón
         </Link>
 
-        <button
-          aria-label="Abrir menú"
-          className="sm:hidden p-2 rounded hover:bg-foreground/5"
-          onClick={() => setIsOpen((v) => !v)}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-2">
+          <ul className="hidden sm:flex gap-6 text-sm">
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={`#${s.id}`}
+                  className={`hover:opacity-80 ${active === s.id ? "text-accent" : ""}`}
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <ul className="hidden sm:flex gap-6 text-sm">
-          {sections.map((s) => (
-            <li key={s.id}>
-              <a
-                href={`#${s.id}`}
-                className={`hover:opacity-80 ${active === s.id ? "text-accent" : ""}`}
-              >
-                {s.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ThemeToggle />
+
+          <button
+            aria-label="Abrir menú"
+            className="sm:hidden p-2 rounded hover:bg-foreground/5"
+            onClick={() => setIsOpen((v) => !v)}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {isOpen && (

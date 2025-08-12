@@ -6,6 +6,7 @@ export type Project = {
   tags: string[];
   liveUrl?: string;
   repoUrl?: string;
+  slug?: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -31,6 +32,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.repoUrl && (
           <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center h-9 rounded-md border border-foreground/20 px-3 text-sm hover:bg-foreground/5">
             Repositorio
+          </Link>
+        )}
+        {project.slug && (
+          <Link href={`/proyectos/${project.slug}`} className="inline-flex items-center h-9 rounded-md border border-foreground/20 px-3 text-sm hover:bg-foreground/5">
+            Ver más
           </Link>
         )}
       </div>
