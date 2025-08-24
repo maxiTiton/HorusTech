@@ -1,12 +1,15 @@
 "use client";
 
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const sections = [
   { id: "inicio", label: "Inicio" },
   { id: "sobre-mi", label: "Sobre mí" },
+  { id: "stack", label: "Stack" },
   { id: "proyectos", label: "Proyectos" },
   { id: "contacto", label: "Contacto" },
 ];
@@ -15,6 +18,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState<string>("inicio");
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -23,8 +27,11 @@ export default function NavBar() {
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActive("");
+      return;
+    }
     const observers: IntersectionObserver[] = [];
-
     sections.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
@@ -39,16 +46,15 @@ export default function NavBar() {
       io.observe(el);
       observers.push(io);
     });
-
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  }, [pathname]);
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all ${
-      scrolled ? "backdrop-blur bg-background/70 border-b border-foreground/10" : ""
+      scrolled ? "backdrop-blur bg-background/80 border-b border-accent/20" : ""
     }`}>
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="#inicio" className="font-semibold tracking-tight">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+        <Link href="/#inicio" className="font-semibold tracking-tight text-foreground">
           Máximo Titón
         </Link>
 
@@ -57,8 +63,8 @@ export default function NavBar() {
             {sections.map((s) => (
               <li key={s.id}>
                 <a
-                  href={`#${s.id}`}
-                  className={`hover:opacity-80 ${active === s.id ? "text-accent" : ""}`}
+                  href={`/#${s.id}`}
+                  className={`hover:text-accent transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-dark dark:text-gray-medium"}`}
                 >
                   {s.label}
                 </a>
@@ -70,7 +76,7 @@ export default function NavBar() {
 
           <button
             aria-label="Abrir menú"
-            className="sm:hidden p-2 rounded hover:bg-foreground/5"
+            className="sm:hidden p-2 rounded hover:bg-accent/10 text-gray-dark dark:text-gray-medium"
             onClick={() => setIsOpen((v) => !v)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -81,13 +87,13 @@ export default function NavBar() {
       </nav>
 
       {isOpen && (
-        <div className="sm:hidden border-t border-foreground/10">
+        <div className="sm:hidden border-t border-accent/20 bg-background/95 backdrop-blur">
           <ul className="px-4 py-3 space-y-2">
             {sections.map((s) => (
               <li key={s.id}>
                 <a
-                  href={`#${s.id}`}
-                  className={`block py-2 ${active === s.id ? "text-accent" : ""}`}
+                  href={`/#${s.id}`}
+                  className={`block py-2 transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-dark dark:text-gray-medium hover:text-accent"}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {s.label}

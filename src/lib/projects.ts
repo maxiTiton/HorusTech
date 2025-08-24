@@ -2,27 +2,33 @@ import type { Project } from "@/components/ProjectCard";
 
 export const projects: Project[] = [
   {
-    title: "Las Casonas",
+    title: "Cabañas Las Casonas",
     description:
       "Sitio web para complejo de cabañas. Desarrollo front‑end responsivo con foco en performance y SEO.",
-    tags: ["Next.js", "React", "Tailwind CSS"],
+    tags: ["React", "CSS"],
     liveUrl: "https://www.las-casonas.com.ar/",
+    repoUrl: "https://github.com/maxiTiton/CabaniasLasCasonas",
+    image: "/PortadaLasCasonas.png",
     slug: "las-casonas",
   },
   {
-    title: "Dos Lunas Online",
+    title: "Cabañas Dos Lunas",
     description:
       "Web informativa para cabañas/turismo con diseño limpio, galerías y secciones esenciales.",
-    tags: ["Next.js", "TypeScript", "UI/UX"],
+    tags: ["React", "Tailwind CSS"],
     liveUrl: "https://www.doslunasonline.com.ar/",
+    repoUrl: "https://github.com/maxiTiton/DosLunas",
+    image: "/PortadaDosLunas.png",
     slug: "dos-lunas-online",
   },
   {
-    title: "Luis María — App gastronómica",
+    title: "Luis María — Web gastronómica",
     description:
-      "Aplicación full‑stack para un local gastronómico: menú, pedidos y panel de administración.",
-    tags: ["Full‑stack", "API", "Auth"],
+      "Sitio web full-stack para un local gastronómico: menú, pedidos y panel de administración.",
+  tags: ["Next.js", "NextAuth.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
     liveUrl: "https://luis-maria.vercel.app/",
+    repoUrl: "https://github.com/maxiTiton/LuisMaria",
+    image: "/PortadaLuisMaria.png",
     slug: "luis-maria",
   },
 ];
