@@ -22,14 +22,14 @@ export default function Hero() {
               <p className="mt-4 text-base sm:text-lg text-gray-dark dark:text-gray-medium text-justify">
                 Estudiante de Ingeniería en Sistemas, Analista en Sistemas y Desarrollador Full Stack Jr. Apasionado por la tecnología y la innovación, ofreciendo soluciones digitales y valor en cada proyecto.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#proyectos" className="btn-primary h-11 px-5 text-sm font-medium">
+              <div className="mt-6 flex flex-col md:flex-row flex-wrap gap-3">
+                <a href="#proyectos" className="btn-primary h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
                   Ver proyectos
                 </a>
-                <a href="/cv.pdf" download className="btn-outline h-11 px-5 text-sm font-medium">
+                <a href="/cv.pdf" download className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
                   Descargar CV
                 </a>
-                <a href="#contacto" className="btn-outline h-11 px-5 text-sm font-medium">
+                <a href="#contacto" className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
                   Contacto
                 </a>
               </div>
