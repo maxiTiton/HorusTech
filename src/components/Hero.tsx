@@ -26,7 +26,7 @@ export default function Hero() {
                 <a href="#proyectos" className="btn-primary h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
                   Ver proyectos
                 </a>
-                <a href="/cv.pdf" download className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
+                <a href="/Maximo_Titon_CV.pdf" download className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
                   Descargar CV
                 </a>
                 <a href="#contacto" className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
