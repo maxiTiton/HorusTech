@@ -1,44 +1,25 @@
-# Portfolio de Máximo Titón
+# HorusTech 🌐⚡  
+**Innovative Digital Solutions for Modern Businesses**
 
-Sitio personal construido con Next.js (App Router), React y Tailwind CSS.
+At **HorusTech**, we design and build smart digital solutions that empower businesses to grow in the digital era.  
+From **modern websites** to **custom applications** and **automation tools**, our mission is to help companies transform their online presence and unlock new opportunities.  
 
-## Tecnologías
-- Next.js 15
-- React 19
-- Tailwind CSS 4
-- TypeScript
+---
 
-## Estructura
-- `src/app` — App Router, páginas y API
-- `src/components` — Componentes UI
-- `src/lib` — Datos y utilidades
+## 🔹 What We Do
+- **Web Development** → Responsive and high-performance websites.  
+- **Digital Transformation** → Bringing businesses online with tailored solutions.  
+- **Automation Tools** → Save time and improve efficiency with smart systems.  
+- **Custom Software** → Tailored apps to fit each client’s needs.  
 
-## Desarrollo
-```bash
-npm install
-npm run dev
-# abre http://localhost:3000
-```
+---
 
-## Contacto (API)
-La ruta `POST /api/contact` envía un email usando SMTP vía `nodemailer`.
+## 🚀 Our Vision
+To become a trusted technology partner for businesses, guiding them into the digital future with impactful, scalable, and user-friendly solutions.  
 
-Variables de entorno requeridas (crear `.env.local`):
-```
-SMTP_HOST=your_smtp_host
-SMTP_PORT=587
-SMTP_USER=your_user
-SMTP_PASS=your_pass
-SMTP_FROM=Portfolio <no-reply@your-domain.com>
-CONTACT_TO=maximot0904@gmail.com
-```
+---
 
-## Despliegue
-Este proyecto está listo para desplegar en Vercel. Solo agregá las variables de entorno en el panel de Vercel y hacé deploy.
+## 👨‍💻 About Us
+HorusTech was founded by two Information Systems Engineering students from Argentina with the mission of helping businesses embrace technology in a simple and effective way.  
 
-## Personalización
-- Editá `src/lib/projects.ts` con los links reales de tus proyectos (repo y demo).
-- Reemplazá `/public/cv.pdf` con tu CV para habilitar el botón de descarga.
-
-## Licencia
-MIT
+---
