@@ -1,4 +1,4 @@
-# HorusTech 🌐⚡  
+# HorusTech   
 **Innovative Digital Solutions for Modern Businesses**
 
 At **HorusTech**, we design and build smart digital solutions that empower businesses to grow in the digital era.  
