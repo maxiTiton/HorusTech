@@ -15,23 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Máximo Titón — Portfolio",
+  title: "HorusTech — Soluciones Digitales Innovadoras",
   description:
-    "Portfolio de Máximo Titón: desarrollador full‑stack junior, Analista en Sistemas y estudiante de Ingeniería en Sistemas.",
+    "HorusTech: Diseñamos y desarrollamos soluciones digitales inteligentes que potencian el crecimiento empresarial en la era digital.",
   keywords: [
-    "Máximo Titón",
-    "Portfolio",
-    "Desarrollador",
-    "Full‑stack",
+    "HorusTech",
+    "Soluciones Digitales",
+    "Desarrollo Web",
+    "Transformación Digital",
+    "Automatización",
+    "Software Personalizado",
     "Next.js",
     "React",
   ],
   openGraph: {
-    title: "Máximo Titón — Portfolio",
+    title: "HorusTech — Soluciones Digitales Innovadoras",
     description:
-      "Desarrollador full‑stack junior, Analista en Sistemas y estudiante de Ingeniería en Sistemas.",
+      "Diseñamos y desarrollamos soluciones digitales inteligentes que potencian el crecimiento empresarial en la era digital.",
     url: "https://",
-    siteName: "Portfolio de Máximo Titón",
+    siteName: "HorusTech",
     type: "website",
   },
 };

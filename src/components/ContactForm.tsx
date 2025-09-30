@@ -38,16 +38,16 @@ export default function ContactForm() {
   return (
     <form action={handleSubmit} className="space-y-4 max-w-xl">
       <div>
-        <label className="block text-sm mb-1" htmlFor="name">Nombre</label>
-        <input id="name" name="name" required className="w-full rounded-md border border-foreground/20 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-foreground/20" />
+        <label className="block text-sm mb-1 text-gray-dark" htmlFor="name">Nombre</label>
+        <input id="name" name="name" required className="w-full rounded-md border border-gray-medium/30 bg-surface/50 px-3 py-2 text-foreground outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50" />
       </div>
       <div>
-        <label className="block text-sm mb-1" htmlFor="email">Email</label>
-        <input id="email" name="email" type="email" required className="w-full rounded-md border border-foreground/20 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-foreground/20" />
+        <label className="block text-sm mb-1 text-gray-dark" htmlFor="email">Email</label>
+        <input id="email" name="email" type="email" required className="w-full rounded-md border border-gray-medium/30 bg-surface/50 px-3 py-2 text-foreground outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50" />
       </div>
       <div>
-        <label className="block text-sm mb-1" htmlFor="message">Mensaje</label>
-        <textarea id="message" name="message" required rows={5} className="w-full rounded-md border border-foreground/20 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-foreground/20" />
+        <label className="block text-sm mb-1 text-gray-dark" htmlFor="message">Mensaje</label>
+        <textarea id="message" name="message" required rows={5} className="w-full rounded-md border border-gray-medium/30 bg-surface/50 px-3 py-2 text-foreground outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50" placeholder="Cuéntanos sobre tu proyecto..." />
       </div>
       <div className="flex items-center gap-3">
         <button type="submit" disabled={status === "loading"} className="inline-flex h-10 items-center rounded-md bg-foreground text-background px-4 text-sm font-medium hover:bg-foreground/90 disabled:opacity-60">

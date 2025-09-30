@@ -1,16 +1,14 @@
 "use client";
 
-
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const sections = [
   { id: "inicio", label: "Inicio" },
-  { id: "sobre-mi", label: "Sobre mí" },
-  { id: "stack", label: "Stack" },
+  { id: "servicios", label: "Servicios" },
   { id: "proyectos", label: "Proyectos" },
+  { id: "sobre-nosotros", label: "Sobre nosotros" },
   { id: "contacto", label: "Contacto" },
 ];
 
@@ -55,7 +53,7 @@ export default function NavBar() {
     }`}>
       <nav className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
         <Link href="/#inicio" className="font-semibold tracking-tight text-foreground">
-          Máximo Titón
+          HorusTech
         </Link>
 
         <div className="flex items-center gap-2">
@@ -64,7 +62,7 @@ export default function NavBar() {
               <li key={s.id}>
                 <a
                   href={`/#${s.id}`}
-                  className={`hover:text-accent transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-dark dark:text-gray-medium"}`}
+                  className={`hover:text-accent transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-medium"}`}
                 >
                   {s.label}
                 </a>
@@ -72,11 +70,9 @@ export default function NavBar() {
             ))}
           </ul>
 
-          <ThemeToggle />
-
           <button
             aria-label="Abrir menú"
-            className="sm:hidden p-2 rounded hover:bg-accent/10 text-gray-dark dark:text-gray-medium"
+            className="sm:hidden p-2 rounded hover:bg-accent/10 text-gray-medium"
             onClick={() => setIsOpen((v) => !v)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -93,7 +89,7 @@ export default function NavBar() {
               <li key={s.id}>
                 <a
                   href={`/#${s.id}`}
-                  className={`block py-2 transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-dark dark:text-gray-medium hover:text-accent"}`}
+                  className={`block py-2 transition-colors duration-200 ${pathname === "/" && active === s.id ? "text-accent font-medium" : "text-gray-medium hover:text-accent"}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {s.label}

@@ -1,49 +1,50 @@
-import SocialLinks from "@/components/SocialLinks";
 import Reveal from "@/components/Reveal";
 
 export default function Hero() {
   return (
     <section id="inicio" className="pt-24 sm:pt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-        {/* Imagen solo visible en mobile, arriba del grid */}
-        <div className="flex justify-center items-center mb-4 md:hidden">
-          <img
-            src="/FotoMia2.jpeg"
-            alt="Foto de perfil de Máximo Titón"
-            className="rounded-full shadow-lg object-cover border border-accent/20 w-48 h-48 sm:w-64 sm:h-64 filter saturate-65 brightness-95 contrast-95"
-          />
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="text-center space-y-8">
           <Reveal>
             <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                Hola, soy <span className="text-gradient">Máximo Titón</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+                <span className="text-gradient">HorusTech</span>
               </h1>
-              <p className="mt-4 text-base sm:text-lg text-gray-dark dark:text-gray-medium text-justify">
-                Estudiante de Ingeniería en Sistemas, Analista en Sistemas y Desarrollador Full Stack Jr. Apasionado por la tecnología y la innovación, ofreciendo soluciones digitales y valor en cada proyecto.
+              <p className="mt-4 text-xl sm:text-2xl text-gray-medium">
+                Soluciones Digitales Innovadoras
               </p>
-              <div className="mt-6 flex flex-col md:flex-row flex-wrap gap-3">
-                <a href="#proyectos" className="btn-primary h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
-                  Ver proyectos
+              <p className="mt-6 text-base sm:text-lg text-gray-dark max-w-3xl mx-auto">
+                Diseñamos y desarrollamos soluciones digitales inteligentes que potencian el crecimiento empresarial en la era digital. 
+                Desde sitios web modernos hasta aplicaciones personalizadas y herramientas de automatización.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#servicios" className="btn-primary h-12 px-6 text-base font-medium">
+                  Ver nuestros servicios
                 </a>
-                <a href="/Maximo_Titon_CV.pdf" download className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
-                  Descargar CV
+                <a href="#proyectos" className="btn-outline h-12 px-6 text-base font-medium">
+                  Nuestros proyectos
                 </a>
-                <a href="#contacto" className="btn-outline h-11 px-5 text-sm font-medium w-full md:w-auto text-center">
-                  Contacto
+                <a href="#contacto" className="btn-secondary h-12 px-6 text-base font-medium">
+                  Conversemos
                 </a>
               </div>
-              <SocialLinks className="mt-6 text-sm" />
             </div>
           </Reveal>
-          {/* Imagen solo visible en escritorio (md+) */}
+          
           <Reveal>
-            <div className="flex justify-center items-center hidden md:flex">
-              <img
-                src="/FotoMia2.jpeg"
-                alt="Foto de perfil de Máximo Titón"
-                className="rounded-full shadow-lg object-cover border border-accent/20 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 filter saturate-65 brightness-95 contrast-95"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              <div className="card-elevated p-6 text-center">
+                <div className="text-accent text-3xl font-bold">5+</div>
+                <div className="text-gray-medium mt-2">Proyectos Completados</div>
+              </div>
+              <div className="card-elevated p-6 text-center">
+                <div className="text-secondary text-3xl font-bold">100%</div>
+                <div className="text-gray-medium mt-2">Clientes Satisfechos</div>
+              </div>
+              <div className="card-elevated p-6 text-center">
+                <div className="text-gradient-alt text-3xl font-bold">2+</div>
+                <div className="text-gray-medium mt-2">Años de Experiencia</div>
+              </div>
             </div>
           </Reveal>
         </div>
