@@ -19,7 +19,23 @@ To become a trusted technology partner for businesses, guiding them into the dig
 
 ---
 
+## 🛠 Tech Stack
+We use modern technologies to build efficient, scalable and reliable solutions:
+- **Frontend**: React, Vite, TailwindCSS  
+- **Backend**: Django, Node.js, Spring Boot  
+- **Databases**: PostgreSQL, MySQL  
+- **Other Tools**: Docker, GitHub Actions, REST APIs  
+
+---
+
 ## 👨‍💻 About Us
 HorusTech was founded by two Information Systems Engineering students from Argentina with the mission of helping businesses embrace technology in a simple and effective way.  
 
+- [Máximo Titón](https://github.com/maxiTiton)  
+- [Alejo Alfonso](https://github.com/alejoalf)  
+
 ---
+
+## 📬 Contact
+Do you want to bring your business to the digital world? Let’s talk!  
+📧 **horustech.team@gmail.com**  
