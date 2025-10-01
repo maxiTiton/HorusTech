@@ -50,9 +50,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-gray-medium leading-relaxed">
-                Estudiante de Ingeniería en Sistemas con experiencia en desarrollo de software. 
-                Enfocado en crear soluciones innovadoras y escalables que generen impacto real 
-                en los negocios de nuestros clientes.
+                Estudiante de Ingeniería en Sistemas en la UTN, apasionado por la programación, la tecnología y el diseño. Especializado en proyectos full stack profesionales que combinan diseño moderno y eficiencia tecnológica. 
               </p>
             </div>
           </Reveal>
