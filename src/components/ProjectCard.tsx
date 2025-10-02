@@ -57,7 +57,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           </Link>
         )}
       </div>
-      git pull origin Alejo
     </div>
   );
 }
