@@ -64,6 +64,8 @@ export default function About() {
                 <Image
                   src="/fotoAlejo.jpg"
                   alt="Alejo Alfonso"
+                  width={224}
+                  height={224}
                   className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-secondary/20 shadow-lg"
                 />
               </div>

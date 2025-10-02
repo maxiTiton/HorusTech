@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
@@ -18,15 +17,22 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group rounded-2xl shadow-lg p-0 pb-5 sm:pb-6 hover:bg-accent/5 transition-all duration-200 bg-background/80 dark:bg-white/[0.04] overflow-hidden h-full flex flex-col">
       {project.image && (
-        <div className="w-full aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
-          <Image src={project.image} alt={project.title} className="object-cover w-full h-full" />
+        <div className="w-full aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover w-full h-full"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={false}
+          />
         </div>
       )}
-  <div className="flex items-start justify-between gap-4 px-5 sm:px-6 mt-4">
+      <div className="flex items-start justify-between gap-4 px-5 sm:px-6 mt-4">
         <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground">{project.title}</h3>
       </div>
-  <p className="mt-2 text-sm sm:text-base text-gray-dark dark:text-gray-medium px-5 sm:px-6">{project.description}</p>
-  <div className="mt-4 flex flex-wrap gap-2 px-5 sm:px-6 mb-4">
+      <p className="mt-2 text-sm sm:text-base text-gray-dark dark:text-gray-medium px-5 sm:px-6">{project.description}</p>
+      <div className="mt-4 flex flex-wrap gap-2 px-5 sm:px-6 mb-4">
         {project.tags.map((tag) => (
           <span key={tag} className="rounded-full border border-accent/20 px-2.5 py-1 text-xs text-gray-dark dark:text-gray-medium bg-accent/5">
             {tag}
@@ -50,7 +56,8 @@ export default function ProjectCard({ project }: { project: Project }) {
             <FiArrowRight className="ml-1 transition-transform duration-200" />
           </Link>
         )}
-      </div>      git pull origin Alejo
+      </div>
+      git pull origin Alejo
     </div>
   );
 }
