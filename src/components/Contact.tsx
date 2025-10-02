@@ -29,7 +29,7 @@ export default function Contact() {
                       <div className="text-gray-medium">horustech.team@gmail.com</div>
                     </div>
                   </a>
-                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 card hover:scale-105 transition-transform duration-300">
+                  <a href="https://wa.me/5493584307111" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 card hover:scale-105 transition-transform duration-300">
                     <FaWhatsapp className="text-accent text-xl" />
                     <div>
                       <div className="font-medium text-foreground">WhatsApp</div>
