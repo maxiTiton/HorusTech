@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import CountUp from "@/components/CountUp";
 import Plasma from "@/components/Plasma";
 import Image from "next/image";
 
@@ -63,15 +64,36 @@ export default function Hero() {
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
               <div className="card-elevated p-6 text-center">
-                <div className="text-accent text-3xl font-bold">5+</div>
+                <div className="text-accent text-3xl font-bold">
+                  <CountUp
+                    from={0}
+                    to={5}
+                    duration={2}
+                    className="text-accent text-3xl font-bold"
+                  />+
+                </div>
                 <div className="text-gray-medium mt-2">Proyectos Completados</div>
               </div>
               <div className="card-elevated p-6 text-center">
-                <div className="text-secondary text-3xl font-bold">100%</div>
+                <div className="text-secondary text-3xl font-bold">
+                  <CountUp
+                    from={0}
+                    to={100}
+                    duration={2.5}
+                    className="text-secondary text-3xl font-bold"
+                  />%
+                </div>
                 <div className="text-gray-medium mt-2">Clientes Satisfechos</div>
               </div>
               <div className="card-elevated p-6 text-center">
-                <div className="text-gradient-alt text-3xl font-bold">2+</div>
+                <div className="text-gradient-alt text-3xl font-bold">
+                  <CountUp
+                    from={0}
+                    to={2}
+                    duration={1.8}
+                    className="text-gradient-alt text-3xl font-bold"
+                  />+
+                </div>
                 <div className="text-gray-medium mt-2">Años de Experiencia</div>
               </div>
             </div>

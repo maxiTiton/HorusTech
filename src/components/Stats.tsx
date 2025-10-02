@@ -1,29 +1,34 @@
 import Reveal from "@/components/Reveal";
+import CountUp from "@/components/CountUp";
 import { FaRocket, FaClock, FaUsers, FaCheck } from "react-icons/fa";
 
 export default function Stats() {
   const stats = [
     {
       icon: <FaRocket className="text-accent text-3xl" />,
-      number: "50+",
+      number: 50,
+      suffix: "+",
       label: "Horas de desarrollo",
       description: "Experiencia práctica en proyectos reales"
     },
     {
       icon: <FaUsers className="text-secondary text-3xl" />,
-      number: "10+",
+      number: 10,
+      suffix: "+",
       label: "Clientes potenciales",
       description: "Empresas interesadas en nuestros servicios"
     },
     {
       icon: <FaClock className="text-accent text-3xl" />,
-      number: "24h",
+      number: 24,
+      suffix: "h",
       label: "Tiempo de respuesta",
       description: "Respondemos consultas en menos de un día"
     },
     {
       icon: <FaCheck className="text-secondary text-3xl" />,
-      number: "100%",
+      number: 100,
+      suffix: "%",
       label: "Satisfacción",
       description: "Compromiso con la calidad en cada proyecto"
     }
@@ -51,7 +56,12 @@ export default function Stats() {
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold text-foreground mb-2 group-hover:text-gradient transition-all duration-300">
-                  {stat.number}
+                  <CountUp
+                    from={0}
+                    to={stat.number}
+                    duration={2 + index * 0.3}
+                    className="text-3xl font-bold text-foreground group-hover:text-gradient transition-all duration-300"
+                  />{stat.suffix}
                 </div>
                 <div className="font-semibold text-foreground mb-2">
                   {stat.label}
