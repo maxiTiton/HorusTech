@@ -1,6 +1,5 @@
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
-import Plasma from "@/components/Plasma";
 import Image from "next/image";
 
 export default function Hero() {
