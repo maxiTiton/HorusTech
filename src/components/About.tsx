@@ -1,6 +1,7 @@
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import { FaGraduationCap, FaCode, FaHandshake, FaRocket, FaLightbulb, FaUsers } from "react-icons/fa";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -16,42 +17,81 @@ export default function About() {
 
         <div className="mt-12 grid md:grid-cols-2 gap-8 lg:gap-12">
           <Reveal>
-            <div className="card-elevated p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <img
+            <div className="card-elevated overflow-hidden">
+              {/* Foto centrada en la parte superior - sin efectos */}
+              <div className="flex justify-center pt-8 pb-6">
+                <Image
                   src="/fotoMaximo.jpg"
                   alt="Máximo Titón"
-                  className="w-28 h-28 rounded-full object-cover border-2 border-accent/30"
+                  width={224} // 56 * 4 (rem a px, ajusta según tu diseño)
+                  height={224}
+                  className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-accent/20 shadow-lg"
                 />
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground">Máximo Titón</h3>
-                  <p className="text-accent">Co-fundador & Desarrollador Full Stack</p>
+              </div>
+              
+              {/* Contenido de la tarjeta */}
+              <div className="px-8 pb-8 text-center">
+                {/* Información personal */}
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    Máximo Titón
+                  </h3>
+                  <div className="inline-block px-4 py-2 bg-accent/10 rounded-full border border-accent/20 mb-4">
+                    <p className="text-accent font-medium">Co-fundador & Desarrollador Full Stack</p>
+                  </div>
+                </div>
+                
+                {/* Descripción */}
+                <p className="text-gray-medium leading-relaxed text-center mb-6">
+                  Estudiante de Ingeniería en Sistemas, Analista en Sistemas y Desarrollador Full Stack. 
+                  Apasionado por la tecnología, la innovación y la inteligencia artificial, ofreciendo 
+                  soluciones digitales y valor en cada proyecto.
+                </p>
+                
+                {/* Skills o tags */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 text-xs bg-accent/10 text-accent rounded-full border border-accent/20">IA</span>
+                  <span className="px-3 py-1 text-xs bg-accent/10 text-accent rounded-full border border-accent/20">Full Stack</span>
                 </div>
               </div>
-              <p className="text-gray-medium leading-relaxed">
-                Estudiante de 4° año de Ingeniería en Sistemas, especializado en desarrollo full stack 
-                con especial interés en IA. Certificación de inglés B2. Se destaca por su disciplina, 
-                compromiso y capacidad de adaptación.
-              </p>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="card-elevated p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <img
+            <div className="card-elevated overflow-hidden">
+              {/* Foto centrada en la parte superior - sin efectos */}
+              <div className="flex justify-center pt-8 pb-6">
+                <Image
                   src="/fotoAlejo.jpg"
                   alt="Alejo Alfonso"
-                  className="w-28 h-28 rounded-full object-cover border-2 border-secondary/30"
+                  className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-secondary/20 shadow-lg"
                 />
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground">Alejo Alfonso</h3>
-                  <p className="text-secondary">Co-fundador & Desarrollador Full Stack</p>
+              </div>
+              
+              {/* Contenido de la tarjeta */}
+              <div className="px-8 pb-8 text-center">
+                {/* Información personal */}
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    Alejo Alfonso
+                  </h3>
+                  <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full border border-secondary/20 mb-4">
+                    <p className="text-secondary font-medium">Co-fundador & Desarrollador Full Stack</p>
+                  </div>
+                </div>
+                
+                {/* Descripción */}
+                <p className="text-gray-medium leading-relaxed text-center mb-6">
+                  Estudiante de Ingeniería en Sistemas, apasionado por la programación, la tecnología y el diseño. 
+                  Especializado en proyectos full stack profesionales que combinan diseño moderno y eficiencia tecnológica.
+                </p>
+                
+                {/* Skills o tags */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 text-xs bg-secondary/10 text-secondary rounded-full border border-secondary/20">Diseño</span>
+                  <span className="px-3 py-1 text-xs bg-secondary/10 text-secondary rounded-full border border-secondary/20">Full Stack</span>
                 </div>
               </div>
-              <p className="text-gray-medium leading-relaxed">
-                Estudiante de Ingeniería en Sistemas en la UTN, apasionado por la programación, la tecnología y el diseño. Especializado en proyectos full stack profesionales que combinan diseño moderno y eficiencia tecnológica. 
-              </p>
             </div>
           </Reveal>
         </div>

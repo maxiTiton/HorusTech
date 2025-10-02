@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   const [year, setYear] = useState<number | null>(null);
@@ -37,9 +37,6 @@ export default function Footer() {
                 horustech.team@gmail.com
               </a>
               <div className="flex gap-4">
-                <a href="https://linkedin.com/company/horustech" target="_blank" rel="noopener noreferrer" className="text-gray-medium hover:text-accent transition-colors">
-                  <FaLinkedin className="text-xl" />
-                </a>
                 <a href="https://github.com/maxiTiton" target="_blank" rel="noopener noreferrer" className="text-gray-medium hover:text-accent transition-colors">
                   <FaGithub className="text-xl" />
                 </a>

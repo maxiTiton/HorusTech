@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
 
 export type Project = {
   title: string;
@@ -18,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <div className="group rounded-2xl shadow-lg p-0 pb-5 sm:pb-6 hover:bg-accent/5 transition-all duration-200 bg-background/80 dark:bg-white/[0.04] overflow-hidden h-full flex flex-col">
       {project.image && (
         <div className="w-full aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
-          <img src={project.image} alt={project.title} className="object-cover w-full h-full" />
+          <Image src={project.image} alt={project.title} className="object-cover w-full h-full" />
         </div>
       )}
   <div className="flex items-start justify-between gap-4 px-5 sm:px-6 mt-4">
@@ -49,7 +50,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <FiArrowRight className="ml-1 transition-transform duration-200" />
           </Link>
         )}
-      </div>
+      </div>      git pull origin Alejo
     </div>
   );
 }
