@@ -1,12 +1,33 @@
 import Reveal from "@/components/Reveal";
+import Plasma from "@/components/Plasma";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="pt-24 sm:pt-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+    <section id="inicio" className="pt-24 sm:pt-28 pb-24 sm:pb-32" style={{ position: "relative", overflow: "hidden" }}>
+      {/* Plasma background */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: 0,
+        pointerEvents: "none"
+      }}>
+        <Plasma 
+          color="#8400ff"
+          speed={0.6}
+          direction="forward"
+          scale={1.1}
+          opacity={0.7}
+          mouseInteractive={true}
+        />
+      </div>
+      {/* Content above plasma */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12" style={{ position: "relative", zIndex: 1 }}>
         <div className="text-center space-y-8">
           <Reveal>
-            <div>
+            <div className="flex flex-col items-center">
+              <img src="/logo.png" alt="Logo HorusTech" className="h-36 w-36 mb-4 object-contain" />
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 <span className="text-gradient">HorusTech</span>
               </h1>

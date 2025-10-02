@@ -52,7 +52,8 @@ export default function NavBar() {
       scrolled ? "backdrop-blur bg-background/80 border-b border-accent/20" : ""
     }`}>
       <nav className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
-        <Link href="/#inicio" className="font-semibold tracking-tight text-foreground">
+        <Link href="/#inicio" className="flex items-center gap-2 font-semibold tracking-tight text-foreground">
+          <img src="/logo.png" alt="Logo HorusTech" className="h-12 w-12 object-contain" />
           HorusTech
         </Link>
 
