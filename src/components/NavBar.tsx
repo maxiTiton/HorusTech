@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -53,7 +54,14 @@ export default function NavBar() {
     }`}>
       <nav className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
         <Link href="/#inicio" className="flex items-center gap-2 font-semibold tracking-tight text-foreground">
-          <img src="/logo.png" alt="Logo HorusTech" className="h-12 w-12 object-contain" />
+          <Image
+            src="/logo.png"
+            alt="Logo HorusTech"
+            width={48}
+            height={48}
+            className="h-12 w-12 object-contain"
+            priority
+          />
           HorusTech
         </Link>
 

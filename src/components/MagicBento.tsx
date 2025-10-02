@@ -17,7 +17,7 @@ const MagicBento = ({
   useEffect(() => {
     if (disableAnimations || !enableSpotlight) return;
 
-    let spotlight = document.createElement("div");
+    const spotlight = document.createElement("div");
     spotlight.className = "global-spotlight";
     spotlight.style.cssText = `
       position: fixed;

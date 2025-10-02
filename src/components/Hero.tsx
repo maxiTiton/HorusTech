@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import Plasma from "@/components/Plasma";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -27,7 +28,14 @@ export default function Hero() {
         <div className="text-center space-y-8">
           <Reveal>
             <div className="flex flex-col items-center">
-              <img src="/logo.png" alt="Logo HorusTech" className="h-36 w-36 mb-4 object-contain" />
+              <Image
+                src="/logo.png"
+                alt="Logo HorusTech"
+                width={144}
+                height={144}
+                className="h-36 w-36 mb-4 object-contain"
+                priority
+              />
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 <span className="text-gradient">HorusTech</span>
               </h1>
