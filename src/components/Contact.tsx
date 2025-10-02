@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import SectionHeader from "@/components/SectionHeader";
 import Reveal from "@/components/Reveal";
-import { FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (

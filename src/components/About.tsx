@@ -1,6 +1,7 @@
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import { FaGraduationCap, FaCode, FaHandshake, FaRocket, FaLightbulb, FaUsers } from "react-icons/fa";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -19,9 +20,11 @@ export default function About() {
             <div className="card-elevated overflow-hidden">
               {/* Foto centrada en la parte superior - sin efectos */}
               <div className="flex justify-center pt-8 pb-6">
-                <img
+                <Image
                   src="/fotoMaximo.jpg"
                   alt="Máximo Titón"
+                  width={224} // 56 * 4 (rem a px, ajusta según tu diseño)
+                  height={224}
                   className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-accent/20 shadow-lg"
                 />
               </div>
@@ -58,7 +61,7 @@ export default function About() {
             <div className="card-elevated overflow-hidden">
               {/* Foto centrada en la parte superior - sin efectos */}
               <div className="flex justify-center pt-8 pb-6">
-                <img
+                <Image
                   src="/fotoAlejo.jpg"
                   alt="Alejo Alfonso"
                   className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-secondary/20 shadow-lg"
