@@ -44,9 +44,9 @@ void mainImage(out vec4 o, vec2 C) {
   
   vec2 mouseOffset = (uMouse - center) * 0.0002;
   C += mouseOffset * length(C - center) * step(0.5, uMouseInteractive);
-  
-  float i, d, z, T = iTime * uSpeed * uDirection;
-  vec3 O, p, S;
+
+  float i = 0.0, d = 0.0, z = 0.0, T = iTime * uSpeed * uDirection;
+  vec3 O = vec3(0.0), p = vec3(0.0), S = vec3(0.0);
 
   for (vec2 r = iResolution.xy, Q; ++i < 60.; O += o.w/d*o.xyz) {
     p = z*normalize(vec3(C-.5*r,r.y)); 
@@ -106,7 +106,8 @@ export const Plasma = ({
   const mousePos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     const useCustomColor = color ? 1.0 : 0.0;
     const customColorRgb = color ? hexToRgb(color) : [1, 1, 1];
@@ -124,7 +125,7 @@ export const Plasma = ({
     canvas.style.display = 'block';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
-    containerRef.current.appendChild(canvas);
+    container.appendChild(canvas);
 
     const geometry = new Triangle(gl);
 
@@ -149,7 +150,7 @@ export const Plasma = ({
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!mouseInteractive) return;
-      const rect = containerRef.current!.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       mousePos.current.x = e.clientX - rect.left;
       mousePos.current.y = e.clientY - rect.top;
       const mouseUniform = program.uniforms.uMouse.value;
@@ -158,11 +159,11 @@ export const Plasma = ({
     };
 
     if (mouseInteractive) {
-      containerRef.current.addEventListener('mousemove', handleMouseMove);
+      container.addEventListener('mousemove', handleMouseMove);
     }
 
     const setSize = () => {
-      const rect = containerRef.current!.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const width = Math.max(1, Math.floor(rect.width));
       const height = Math.max(1, Math.floor(rect.height));
       renderer.setSize(width, height);
@@ -172,13 +173,13 @@ export const Plasma = ({
     };
 
     const ro = new ResizeObserver(setSize);
-    ro.observe(containerRef.current!);
+    ro.observe(container);
     setSize();
 
     let raf = 0;
     const t0 = performance.now();
     const loop = (t: number) => {
-      let timeValue = (t - t0) * 0.001;
+      const timeValue = (t - t0) * 0.001; // Cambiado de let a const
 
       if (direction === 'pingpong') {
         const cycle = Math.sin(timeValue * 0.5) * directionMultiplier;
@@ -194,11 +195,11 @@ export const Plasma = ({
     return () => {
       cancelAnimationFrame(raf);
       ro.disconnect();
-      if (mouseInteractive && containerRef.current) {
-        containerRef.current.removeEventListener('mousemove', handleMouseMove);
+      if (mouseInteractive) {
+        container.removeEventListener('mousemove', handleMouseMove);
       }
       try {
-        containerRef.current?.removeChild(canvas);
+        container.removeChild(canvas);
       } catch {
         // Canvas already removed
       }
