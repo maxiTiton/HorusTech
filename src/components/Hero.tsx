@@ -43,7 +43,7 @@ export default function Hero() {
             <p className="mt-4 text-lg sm:text-xl text-gray-medium">
               Soluciones Digitales Innovadoras
             </p>
-            <p className="mt-6 text-base sm:text-lg text-gray-dark max-w-2xl mx-auto">
+            <p className="mt-6 text-base sm:text-lg text-gray-dark max-w-2xl mx-auto text-center">
               Diseñamos y desarrollamos soluciones digitales inteligentes que
               potencian el crecimiento empresarial en la era digital. Desde
               sitios web modernos hasta aplicaciones personalizadas y herramientas
@@ -51,16 +51,22 @@ export default function Hero() {
             </p>
 
             {/* Botones */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#servicios" className="btn-primary h-12 px-6 text-base font-medium">
-                Ver nuestros servicios
-              </a>
-              <a href="#proyectos" className="btn-outline h-12 px-6 text-base font-medium">
-                Nuestros proyectos
-              </a>
-              <a href="#contacto" className="btn-secondary h-12 px-6 text-base font-medium">
-                Conversemos
-              </a>
+            <div className="mt-8">
+              {/* Mobile: full-bleed buttons */}
+              <div className="block sm:hidden" style={{ width: '100vw', marginLeft: 'calc(50% - 50vw)' }}>
+                <div className="px-4 flex flex-col gap-4">
+                  <a href="#servicios" className="btn-primary h-12 px-6 text-base font-medium block w-full text-center">Ver nuestros servicios</a>
+                  <a href="#proyectos" className="btn-outline h-12 px-6 text-base font-medium block w-full text-center">Nuestros proyectos</a>
+                  <a href="#contacto" className="btn-secondary h-12 px-6 text-base font-medium block w-full text-center">Conversemos</a>
+                </div>
+              </div>
+
+              {/* Desktop / sm+: inline buttons */}
+              <div className="hidden sm:flex gap-4 justify-center">
+                <a href="#servicios" className="btn-primary h-12 px-6 text-base font-medium sm:inline-flex sm:w-auto justify-center">Ver nuestros servicios</a>
+                <a href="#proyectos" className="btn-outline h-12 px-6 text-base font-medium sm:inline-flex sm:w-auto justify-center">Nuestros proyectos</a>
+                <a href="#contacto" className="btn-secondary h-12 px-6 text-base font-medium sm:inline-flex sm:w-auto justify-center">Conversemos</a>
+              </div>
             </div>
           </div>
         </Reveal>

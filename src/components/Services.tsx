@@ -45,8 +45,8 @@ export default function Services() {
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Reveal key={index}>
-              <div className="card-elevated p-6 h-full hover:scale-105 transition-transform duration-300">
-                <div className="flex flex-col h-full">
+        <div className="card-elevated p-6 hover:scale-105 transition-transform duration-300 min-h-[220px] sm:min-h-0">
+          <div className="flex flex-col h-full">
                   <div className="mb-4">
                     {service.icon}
                   </div>
