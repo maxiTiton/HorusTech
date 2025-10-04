@@ -9,7 +9,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <SectionHeader title="Sobre nosotros" />
         <Reveal>
-          <p className="mt-4 text-gray-medium max-w-none leading-relaxed text-center lg:text-left">
+            <p className="mt-4 text-gray-medium max-w-none leading-relaxed text-left">
             HorusTech fue fundada por dos estudiantes de Ingeniería en Sistemas de Información de Argentina, 
             unidos por la pasión de ayudar a las empresas a abrazar la tecnología de manera simple y efectiva.
           </p>
@@ -30,7 +30,7 @@ export default function About() {
               </div>
               
               {/* Contenido de la tarjeta */}
-              <div className="px-8 pb-8 text-center">
+                <div className="px-8 pb-8 text-center">
                 {/* Información personal */}
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -42,14 +42,14 @@ export default function About() {
                 </div>
                 
                 {/* Descripción */}
-                <p className="text-gray-medium leading-relaxed text-center mb-6">
+                  <p className="text-gray-medium leading-relaxed text-center mb-6">
                   Estudiante de Ingeniería en Sistemas, Analista en Sistemas y Desarrollador Full Stack. 
                   Apasionado por la tecnología, la innovación y la inteligencia artificial, ofreciendo 
                   soluciones digitales y valor en cada proyecto.
                 </p>
                 
                 {/* Skills o tags */}
-                <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex flex-wrap gap-2 justify-center">
                   <span className="px-3 py-1 text-xs bg-accent/10 text-accent rounded-full border border-accent/20">IA</span>
                   <span className="px-3 py-1 text-xs bg-accent/10 text-accent rounded-full border border-accent/20">Full Stack</span>
                 </div>
@@ -71,7 +71,7 @@ export default function About() {
               </div>
               
               {/* Contenido de la tarjeta */}
-              <div className="px-8 pb-8 text-center">
+                <div className="px-8 pb-8 text-center">
                 {/* Información personal */}
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -83,13 +83,13 @@ export default function About() {
                 </div>
                 
                 {/* Descripción */}
-                <p className="text-gray-medium leading-relaxed text-center mb-6">
+                  <p className="text-gray-medium leading-relaxed text-center mb-6">
                   Estudiante de Ingeniería en Sistemas, apasionado por la programación, la tecnología y el diseño. 
                   Especializado en proyectos full stack profesionales que combinan diseño moderno y eficiencia tecnológica.
                 </p>
                 
                 {/* Skills o tags */}
-                <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex flex-wrap gap-2 justify-center">
                   <span className="px-3 py-1 text-xs bg-secondary/10 text-secondary rounded-full border border-secondary/20">Diseño</span>
                   <span className="px-3 py-1 text-xs bg-secondary/10 text-secondary rounded-full border border-secondary/20">Full Stack</span>
                 </div>
