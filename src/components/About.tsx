@@ -9,7 +9,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <SectionHeader title="Sobre nosotros" />
         <Reveal>
-          <p className="mt-4 text-gray-medium max-w-none leading-relaxed text-center">
+          <p className="mt-4 text-gray-medium max-w-none leading-relaxed text-center lg:text-left">
             HorusTech fue fundada por dos estudiantes de Ingeniería en Sistemas de Información de Argentina, 
             unidos por la pasión de ayudar a las empresas a abrazar la tecnología de manera simple y efectiva.
           </p>

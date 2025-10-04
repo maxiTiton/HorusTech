@@ -10,12 +10,7 @@ export default function Services() {
       description: "Sitios web modernos, responsivos y optimizados para SEO con las últimas tecnologías.",
       technologies: ["React", "Next.js", "TailwindCSS", "TypeScript"]
     },
-    {
-      icon: <FaMobile className="text-4xl text-secondary" />,
-      title: "Aplicaciones Móviles",
-      description: "Apps nativas y multiplataforma para iOS y Android con experiencias de usuario excepcionales.",
-      technologies: ["React Native", "Flutter", "PWA"]
-    },
+    // Aplicaciones Móviles eliminado por petición
     {
       icon: <FaServer className="text-4xl text-accent" />,
       title: "Backend & APIs",
@@ -28,12 +23,7 @@ export default function Services() {
       description: "Soluciones de automatización para optimizar procesos y aumentar la eficiencia.",
       technologies: ["Python", "Zapier", "Custom Scripts"]
     },
-    {
-      icon: <FaCloud className="text-4xl text-accent" />,
-      title: "Soluciones Cloud",
-      description: "Implementación y gestión de infraestructura en la nube para escalabilidad.",
-      technologies: ["AWS", "Azure", "Docker", "CI/CD"]
-    },
+    // Soluciones Cloud eliminado por petición
     {
       icon: <FaCog className="text-4xl text-secondary" />,
       title: "Consultoría Digital",
@@ -47,12 +37,12 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <SectionHeader title="Nuestros servicios" />
         <Reveal>
-          <p className="mt-4 text-gray-medium text-center max-w-3xl mx-auto">
+          <p className="mt-4 text-gray-medium text-left max-w-3xl">
             Ofrecemos soluciones tecnológicas integrales para impulsar el crecimiento de tu negocio
           </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Reveal key={index}>
               <div className="card-elevated p-6 h-full hover:scale-105 transition-transform duration-300">
@@ -63,7 +53,7 @@ export default function Services() {
                   <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
                   <p className="text-gray-medium mb-4 flex-grow">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, i) => (
+                    {Array.isArray(service.technologies) && service.technologies.map((tech, i) => (
                       <span
                         key={i}
                         className="px-3 py-1 text-xs bg-accent/10 text-accent rounded-full border border-accent/20"
