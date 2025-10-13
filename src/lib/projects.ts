@@ -22,16 +22,6 @@ export const projects: Project[] = [
     slug: "dos-lunas-online",
   },
   {
-    title: "Luis María — Web gastronómica",
-    description:
-      "Sitio web full-stack para un local gastronómico: menú, pedidos y panel de administración.",
-  tags: ["Next.js", "NextAuth.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
-    liveUrl: "https://luis-maria.vercel.app/",
-    repoUrl: "https://github.com/maxiTiton/LuisMaria",
-    image: "/PortadaLuisMaria.png",
-    slug: "luis-maria",
-  },
-  {
     title: "Rio cuarto celulares - E-commerce",
     description:
       "Sitio web full-stack para un local de venta de celulares: catálogo, carrito y panel de administración.",
