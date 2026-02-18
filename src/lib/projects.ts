@@ -25,10 +25,18 @@ export const projects: Project[] = [
     title: "Rio cuarto celulares - E-commerce",
     description:
       "Sitio web full-stack para un local de venta de celulares: catálogo, carrito y panel de administración.",
-  tags: ["PostCSS", "Node.js", "React", "Tailwind CSS", "PostgreSQL"],
+    tags: ["PostCSS", "Node.js", "React", "Tailwind CSS", "PostgreSQL"],
     liveUrl: "https://riocuartocelulares.vercel.app/",
     repoUrl: "https://github.com/alejoalf/frontriocuartocelulares",
     image: "/celulares1.png",
     slug: "Rio-cuarto-celulares",
+  },
+  {
+    title: "Angus Bar",
+    description:
+      "Pedidos en vivo por mesa y estado usando Supabase Realtime, con gestión de productos y disponibilidad.",
+    tags: ["React", "Supabase", "Realtime", "Role-based auth"],
+    image: "/angus.png",
+    slug: "angus-bar",
   },
 ];

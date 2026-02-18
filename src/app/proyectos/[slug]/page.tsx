@@ -35,6 +35,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     case "luis-maria":
       customDescription = "Aplicación full-stack construida con Next.js, TypeScript, MongoDB y autenticación con NextAuth.js. Permite a un local gastronómico gestionar su menú, recibir pedidos online y administrar todo desde un panel seguro y moderno.";
       break;
+    case "angus-bar":
+      customDescription = "Pedidos en vivo por mesa y estado con Supabase Realtime, con gestión de productos, disponibilidad y control de accesos por roles. UI optimizada para tablets y barra.";
+      break;
     default:
       customDescription = project.description;
   }
