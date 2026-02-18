@@ -26,7 +26,7 @@ export const projects: Project[] = [
     description:
       "Sitio web full-stack para un local de venta de celulares: catálogo, carrito y panel de administración.",
   tags: ["PostCSS", "Node.js", "React", "Tailwind CSS", "PostgreSQL"],
-    liveUrl: "https://frontriocuartocelulares.vercel.app/",
+    liveUrl: "https://riocuartocelulares.vercel.app/",
     repoUrl: "https://github.com/alejoalf/frontriocuartocelulares",
     image: "/celulares1.png",
     slug: "Rio-cuarto-celulares",
