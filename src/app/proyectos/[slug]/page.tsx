@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import AngusCarousel from "@/components/AngusCarousel";
 
 export function generateStaticParams() {
   return projects.filter((p) => p.slug).map((p) => ({ slug: p.slug! }));
@@ -58,6 +59,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             />
           </div>
         )}
+        {project.slug === "angus-bar" && <AngusCarousel />}
         <h1 className="mt-6 text-3xl sm:text-4xl font-bold tracking-tight">{project.title}</h1>
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
